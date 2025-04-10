@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: session_summary
+    description: "Combines user session channel data with timestamps"
+    columns:
+      - name: userId
+        description: "The user identifier"
+        tests:
+          - not_null
+
+      - name: sessionId
+        description: "Unique identifier for each session"
+        tests:
+          - unique
+          - not_null
